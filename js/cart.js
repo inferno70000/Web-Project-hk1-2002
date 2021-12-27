@@ -177,7 +177,7 @@ function removeCartItem(event) {
     console.log(buttonClicked.getAttribute("name"));
     buttonClicked.parentElement.parentElement.remove();
     for (let i = 0; i < data.length; i++) {
-        if (data[i].produceId === buttonClicked.getAttribute("name")) {
+        if (data[i].produceId === Number(buttonClicked.getAttribute("name"))) {
             data.splice(i, 1);
             break;
         }
