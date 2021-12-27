@@ -61,7 +61,7 @@ function createnewuser() {
 
         console.log(newuser.username);
         console.log("Type user 1:");
-        console.log(typeof(newuser));
+        console.log(typeof (newuser));
 
         userArray.push(newuser);
 
@@ -92,6 +92,7 @@ function login() {
     console.log(username);
     console.log(password);
 
+    var checkLog = false;
     var userArray = JSON.parse(localStorage.getItem('txtusername'));
     for (i = 0; i < userArray.length; i++)
         if (userArray[i].username == username && userArray[i].password == password) {
@@ -103,7 +104,13 @@ function login() {
                 userCurent = userArray[i].userID;
                 //window.location = "user.html";
             }
+            checkLog = true;
         }
+    if (checkLog == false) {
+        alert("Bạn đã nhập sai tài khoản hoặc mật khẩu.");
+        document.getElementById('txtusernamelog').value = "";
+        document.getElementById('txtpasswordlog').value = "";
+    }
     localStorage.setItem('status', JSON.stringify(logStatus));
     localStorage.setItem('userCurent', JSON.stringify(userCurent));
     changeLogstatus();
@@ -165,7 +172,7 @@ function changeLogstatus() {
 // Get the input field
 var input = document.getElementById("txtpasswordlog");
 // Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function (event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
         // Cancel the default action, if needed
