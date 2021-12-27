@@ -22,10 +22,12 @@ html {
 
 
 header {
+  background-color: #1f2833;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 10px 10%;
+  margin-bottom: 50px;
 }
 
 .nav_links {
@@ -38,6 +40,7 @@ header {
 }
 
 .nav_links li a {
+  color: white;
   transition: all 0.3s ease 0;
 }
 
@@ -77,6 +80,7 @@ header {
 }
 
 .cart a {
+  color: white;
   transition: all 0.2s;
 }
 
