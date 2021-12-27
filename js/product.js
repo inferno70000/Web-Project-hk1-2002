@@ -381,7 +381,7 @@ function loai(matl, tentl) {
 
 function menuTop() {
     arrTheLoai = [
-        new loai('all', 'Tất cả sản phầm'),
+        new loai('all', 'Tất cả sản phẩm'),
         new loai('caphe', 'Cà phê'),
         new loai('da_xay', 'Đá Xay'),
         new loai('tra', 'Trà')
