@@ -107,7 +107,7 @@ function login() {
             checkLog = true;
         }
     if (checkLog == false) {
-        alert("Bạn đã nhập sai tài khoản hoặc mật khẩu.");
+        alert("Bạn đã nhập sai tên đăng nhập hoặc mật khẩu.");
         document.getElementById('txtusernamelog').value = "";
         document.getElementById('txtpasswordlog').value = "";
     }
